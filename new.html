@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>contact Directory</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <section data-role="page" name="contacts" id="contacts" data-theme="a">
+        <header data-role="header" data-position="fixed">
+            <h1>Contacts List</h1>
+        </header>
+        <content data-role="content">
+
+            <div data-role="content" data-theme="a">
+                <a id="show_add_contacts_form" href="#" data-role="button" data-icon="user" data-iconpos="left"
+                    data-mini="true" data-inline="true" data-theme="b"> ADD CONTACT </a>
+
+                <form id="add_contacts_form">
+                    <label for="textinput-1">Name:</label>
+                    <input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="">
+                    <label for="tel">Tel:</label>
+                    <input type="tel" name="tel" id="tel" value="">
+                    <label for="email">email:</label>
+                    <input type="email" name="email" id="email" value="">
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <legend>Gender:</legend>
+                        <input type="radio" name="radio-choice" class="radio-choice" id="radio-choice-a" value="Male" checked="checked">
+                        <label for="radio-choice-a">Male</label>
+                        <input type="radio" name="radio-choice" class="radio-choice" id="radio-choice-b" value="Female">
+                        <label for="radio-choice-b">Female</label>
+                    </fieldset>
+                    <label id="imageID_Label" for="imageID">Contact Image (If available):</label>
+                    <input id="imageID" type="file" value="" data-mini="true" />
+
+                </form>
+
+                <div>
+                    <a id="add_contact_btn" data-role="button" data-icon="plus" data-iconpos="left" data-inline="true"
+                        data-theme="b" data-mini="true">ADD Contact</a>
+
+                    <a id="edit_contact_btn" data-role="button" data-icon="action" data-iconpos="left"
+                        data-inline="true" data-theme="b" data-mini="true">SAVE UPDATES</a>
+
+                    <a id="cancel_add_contact_btn" data-role="button" data-inline="true" data-theme="b"
+                        data-mini="true" data-icon="back" data-iconpos="left">RETURN</a>
+                </div>
+
+
+
+
+                <ul id="myList" data-split-icon="edit" data-split-theme="b" data-theme="b" data-role="listview"
+                    data-inset="true" data-filter="true" data-filter-placeholder="Search for contact"
+                    data-filter-theme="a">
+
+                </ul>
+        </content>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Contacts</h4>
+        </footer>
+    </section>
+
+    <section data-role="page" id="contact_page">
+        <header data-role="header">
+            <a data-icon="home" data-iconpos="left" href="#contacts">HOME</a>
+            <h1>Contact details</h1>
+        </header>
+        <div id="container" data-role="content">
+            <p></p>
+        </div>
+        <div style="margin-left:20px;">
+            <button id="delete_contact_btn" data-icon="delete" data-inline="true"
+             data-mini="true" data-theme="b">DELETE CONTACT</button>
+            <a id="cancel_delete_contact_btn" href="#contacts" data-role="button" data-icon="back" data-inline="true"
+                data-mini="true" data-theme="b">RETURN</a>
+        </div>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Contacts</h4>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
